@@ -1,0 +1,892 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_terminology
+  examples: |
+    - what is [stock](term)?
+    - what is [stock market](term)?
+    - what is [cổ phiếu](term)?
+    - what is [phân tích cơ bản](term)?
+    - what is [thị trường chứng khoán](term)?
+    - what is [ROI](term)?
+    - what is [capital](term)?
+    - what is [bonds](term)
+    - what is definition of [stock](term)?
+    - can you help me understand the [stock](term)?
+    - what is [ROI](term)?
+    - what is definition of [ROI](term)?
+    - what is [stock market](term)?
+    - what is definition of [stock market](term)?
+    - [phân tích cơ bản](term) là gì?
+    - [định giá](term) là gì?
+    - [phương pháp định giá so sánh](term) là gì?
+    - [bảng giá chứng khoán](term) là gì?
+    - [đặt lệnh chứng khoán](term) là gì?
+    - [giới thiệu](term) là gì?
+    - [phân tích cơ bản vs. phân tích kỹ thuật](term) là gì?
+    - [chỉ số p/e và định giá theo p/e](term) là gì?
+    - [phân tích kỹ thuật](term) là gì?
+    - [phương pháp chiết khấu dòng tiền (dcf)](term) là gì?
+    - [chỉ số ev/ebitda](term) là gì?
+    - [vốn hóa thị trường](term) là gì?
+    - [vn-index](term) là gì?
+    - [giá trị sổ sách](term) là gì?
+    - [giá trị doanh nghiệp (ev)](term) là gì?
+    - [thị trường chứng khoán](term) là gì?
+    - [chỉ số p/book](term) là gì?
+    - [thị trường gấu](term) là gì?
+    - [những lầm tưởng về đầu tư](term) là gì?
+    - [khi thị trường chứng khoán giảm điểm mạnh](term) là gì?
+    - [lô chẵn, lô lẻ chứng khoán](term) là gì?
+    - [tổng tài sản quản lý](term) là gì?
+    - [phân bổ tài sản](term) là gì?
+    - [mã chứng khoán](term) là gì?
+    - [tìm hiểu doanh nghiệp - phần 1](term) là gì?
+    - [tìm hiểu về cách hoạt động của doanh nghiệp](term) là gì?
+    - [thu nhập khả dụng](term) là gì?
+    - [tại sao nên đầu tư?](term) là gì?
+    - [chuẩn bị đầu tư](term) là gì?
+    - [mục tiêu tài chính](term) là gì?
+    - [nguyên tắc 50/20/30](term) là gì?
+    - [lập kế hoạch hưu trí](term) là gì?
+    - [cổ phiếu](term) là gì?
+    - [trái phiếu](term) là gì?
+    - [thị trường bò](term) là gì?
+    - [giao dịch ký quỹ](term) là gì?
+    - [cắt lỗ](term) là gì?
+    - [chứng khoán là gì?](term) là gì?
+    - [rủi ro khi đầu tư](term) là gì?
+    - [vì sao nên đầu tư chứng khoán?](term) là gì?
+    - [tài chính cá nhân](term) là gì?
+    - [quản lý tài sản](term) là gì?
+    - [tiền gửi có kỳ hạn](term) là gì?
+    - [đầu tư](term) là gì?
+    - [quỹ khẩn cấp](term) là gì?
+    - [giá trị tài sản ròng (net worth)](term) là gì?
+    - [vay trả góp](term) là gì?
+    - [thuế thu nhập cá nhân](term) là gì?
+    - [lãi kép](term) là gì?
+    - [lãi đơn](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 3](term) là gì?
+    - [tiền lãi/tiền gốc](term) là gì?
+    - [quản lý rủi ro](term) là gì?
+    - [quỹ đầu tư](term) là gì?
+    - [nghĩa vụ tài chính](term) là gì?
+    - [sở gdck hà nội, sở gdck tp. hcm](term) là gì?
+    - [phân biệt đầu tư và đầu cơ](term) là gì?
+    - [rủi ro tài chính](term) là gì?
+    - [nhà hoạch định tài chính](term) là gì?
+    - [loại tài sản đầu tư](term) là gì?
+    - [bất động sản](term) là gì?
+    - [tiền tệ](term) là gì?
+    - [mức độ chấp nhận rủi ro](term) là gì?
+    - [đa dạng hóa danh mục đầu tư](term) là gì?
+    - [tích lũy](term) là gì?
+    - [bảo hiểm](term) là gì?
+    - [quỹ etfs](term) là gì?
+    - [quỹ tín thác đầu tư bất động sản (reit)](term) là gì?
+    - [chi phí sinh hoạt](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 1](term) là gì?
+    - [tỷ lệ phần trăm hàng năm](term) là gì?
+    - [thẻ ghi nợ](term) là gì?
+    - [xếp hạng tín dụng](term) là gì?
+    - [rủi ro phá sản](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 5](term) là gì?
+    - [báo cáo tài chính](term) là gì?
+    - [lợi nhuận gộp](term) là gì?
+    - [tìm hiểu về tài chính cá nhân](term) là gì?
+    - [gdp bình quân đầu người](term) là gì?
+    - [lạm phát đình trệ](term) là gì?
+    - [bảng cân đối kế toán](term) là gì?
+    - [9 chiến lược quản lý tài chính cá nhân](term) là gì?
+    - [báo cáo tài chính cá nhân](term) là gì?
+    - [công ty cổ phần](term) là gì?
+    - [cổ phần](term) là gì?
+    - [cổ đông](term) là gì?
+    - [báo cáo lãi lỗ](term) là gì?
+    - [báo cáo lưu chuyển tiền tệ](term) là gì?
+    - [doanh thu](term) là gì?
+    - [lợi ích của việc quản lý tài chính cá nhân](term) là gì?
+    - [ebit](term) là gì?
+    - [giảm phát](term) là gì?
+    - [làm quen với báo cáo tài chính](term) là gì?
+    - [dự phóng tài chính - phần 1](term) là gì?
+    - [ebitda](term) là gì?
+    - [vốn chủ sở hữu](term) là gì?
+    - [eps](term) là gì?
+    - [roe](term) là gì?
+    - [tổng sản phẩm quốc nội (gdp)](term) là gì?
+    - [các điều cần biết về tài chính cá nhân - phần 1](term) là gì?
+    - [lạm phát](term) là gì?
+    - [chu kỳ kinh tế](term) là gì?
+    - [giai đoạn tăng trưởng](term) là gì?
+    - [giai đoạn suy giảm](term) là gì?
+    - [thị trường vốn nợ](term) là gì?
+    - [chia tách cổ phiếu](term) là gì?
+    - [tỷ suất cổ tức](term) là gì?
+    - [ngày giao dịch không hưởng quyền](term) là gì?
+    - [vòng tài trợ series a](term) là gì?
+    - [đầu tư chủ động vs. thụ động](term) là gì?
+    - [cổ phiếu không theo chu kỳ](term) là gì?
+    - [cổ phiếu phòng thủ](term) là gì?
+    - [cổ phiếu blue-chip](term) là gì?
+    - [cổ phiếu nhạy cảm với lãi suất](term) là gì?
+    - [bẫy tăng giá](term) là gì?
+    - [sức mua](term) là gì?
+    - [chu kỳ cổ phiếu](term) là gì?
+    - [giai đoạn tích lũy](term) là gì?
+    - [giai đoạn phân phối](term) là gì?
+    - [giai đoạn giảm giá](term) là gì?
+    - [công cụ thị trường tiền tệ](term) là gì?
+    - [tỷ giá hối đoái](term) là gì?
+    - [chính sách tiền tệ](term) là gì?
+    - [giai đoạn hồi phục](term) là gì?
+    - [tỷ lệ thất nghiệp](term) là gì?
+    - [bitcoin](term) là gì?
+    - [người bảo lãnh phát hành](term) là gì?
+    - [nhà môi giới, đại lý môi giới](term) là gì?
+    - [cổ tức tiền mặt](term) là gì?
+    - [pha loãng](term) là gì?
+    - [cán cân thương mại](term) là gì?
+    - [giai đoạn đáy](term) là gì?
+    - [gói kích cầu](term) là gì?
+    - [lập kế hoạch tài chính cá nhân - phần 1](term) là gì?
+    - [blockchain](term) là gì?
+    - [chào bán cổ phiếu thứ cấp](term) là gì?
+    - [phát hành riêng lẻ](term) là gì?
+    - [tỷ lệ chi trả cổ tức](term) là gì?
+    - [cổ tức cổ phiếu](term) là gì?
+    - [quyền mua phát hành thêm](term) là gì?
+    - [vòng tài trợ trước hạt giống](term) là gì?
+    - [checklist kế hoạch tài chính hàng năm - phần 1](term) là gì?
+    - [mua cổ phiếu quỹ](term) là gì?
+    - [cổ phiếu tự do chuyển nhượng](term) là gì?
+    - [cổ phiếu ưu đãi chuyển đổi](term) là gì?
+    - [đấu giá](term) là gì?
+    - [phái sinh](term) là gì?
+    - [đang lời/lỗ/hoà vốn](term) là gì?
+    - [huy động vốn startup](term) là gì?
+    - [vòng tài trợ hạt giống](term) là gì?
+    - [bán tháo](term) là gì?
+    - [cổ phiếu tăng trưởng](term) là gì?
+    - [fomo](term) là gì?
+    - [giao dịch theo xu hướng](term) là gì?
+    - [thị trường tiền tệ](term) là gì?
+    - [trái phiếu có kỳ hạn](term) là gì?
+    - [kinh doanh chênh lệch giá](term) là gì?
+    - [độ rộng thị trường](term) là gì?
+    - [cổ phiếu vốn hoá vừa](term) là gì?
+    - [bẫy giảm giá](term) là gì?
+    - [phí môi giới](term) là gì?
+    - [giai đoạn tăng giá](term) là gì?
+    - [các loại ngân hàng](term) là gì?
+    - [lãi suất](term) là gì?
+    - [chính sách tài khóa](term) là gì?
+    - [cung tiền](term) là gì?
+    - [khủng hoảng kinh tế](term) là gì?
+    - [tiền điện tử](term) là gì?
+    - [chào bán cổ phiếu ra công chúng](term) là gì?
+    - [ngày đăng ký cuối cùng](term) là gì?
+    - [lãi lỗ](term) là gì?
+    - [chênh lệch giá mua-giá bán](term) là gì?
+    - [chứng quyền](term) là gì?
+    - [quyền chọn](term) là gì?
+    - [vị thế mua, bán](term) là gì?
+    - [vòng tài trợ series b](term) là gì?
+    - [vòng tài trợ series c](term) là gì?
+    - [thời hạn đầu tư](term) là gì?
+    - [đầu tư ngắn hạn](term) là gì?
+    - [cổ phiếu giá trị](term) là gì?
+    - [cổ phiếu chu kỳ](term) là gì?
+    - [cổ phiếu thu nhập](term) là gì?
+    - [các loại lợi nhuận đầu tư](term) là gì?
+    - [mua bắt đáy](term) là gì?
+    - [thông tin nội bộ](term) là gì?
+    - [cổ phiếu penny](term) là gì?
+    - [thanh khoản thị trường](term) là gì?
+    - [thị trường tài chính](term) là gì?
+    - [trung gian tài chính](term) là gì?
+    - [thị trường cạnh tranh hoàn hảo](term) là gì?
+    - [sự khan hiếm](term) là gì?
+    - [chỉ số giá tiêu dùng (cpi)](term) là gì?
+    - [kinh tế vĩ mô](term) là gì?
+    - [thị trường độc quyền nhóm](term) là gì?
+    - [khoản đầu tư thay thế](term) là gì?
+    - [kế hoạch dự phòng](term) là gì?
+    - [phân tích swot](term) là gì?
+    - [mô hình của porter](term) là gì?
+    - [chỉ số niềm tin người tiêu dùng (cci)](term) là gì?
+    - [tính kinh tế theo quy mô](term) là gì?
+    - [cú sốc cầu](term) là gì?
+    - [giá trị thực](term) là gì?
+    - [giá trị nội tại](term) là gì?
+    - [thuế](term) là gì?
+    - [kinh tế vi mô](term) là gì?
+    - [lập ngân sách](term) là gì?
+    - [quy luật hiệu suất giảm dần](term) là gì?
+    - [lạm phát do cầu kéo](term) là gì?
+    - [huỷ lệnh](term) là gì?
+    - [thị trường độc quyền](term) là gì?
+    - [thị trường cạnh tranh độc quyền](term) là gì?
+    - [giá trị tài sản ròng (nav)](term) là gì?
+    - [thành viên góp vốn](term) là gì?
+    - [vốn cam kết](term) là gì?
+    - [đầu tư mạo hiểm](term) là gì?
+    - [quỹ đầu tư tư nhân](term) là gì?
+    - [thành viên hợp danh](term) là gì?
+    - [startup kỳ lân](term) là gì?
+    - [nhà đầu tư thiên thần](term) là gì?
+    - [giới thiệu về định giá](term) là gì?
+    - [hội đồng quản trị](term) là gì?
+    - [giá trị hiện tại ròng](term) là gì?
+    - [lợi nhuận đầu tư](term) là gì?
+    - [chi phí vốn huy động](term) là gì?
+    - [gọi vốn cộng đồng](term) là gì?
+    - [mua lại tài sản bằng vốn vay](term) là gì?
+    - [phương pháp định giá so sánh p/e](term) là gì?
+    - [đầu tư bắt đầu từ đâu](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 2](term) là gì?
+    - [phương pháp “tự thân vận động”](term) là gì?
+    - [các điều cần biết về tài chính cá nhân - phần 2](term) là gì?
+    - [lập kế hoạch tài chính cá nhân - phần 2](term) là gì?
+    - [checklist kế hoạch tài chính hàng năm - phần 2](term) là gì?
+    - [tài trợ hạng hai](term) là gì?
+    - [quỹ của các quỹ](term) là gì?
+    - [lạm phát tích hợp](term) là gì?
+    - [phá sản](term) là gì?
+    - [sáp nhập và mua lại](term) là gì?
+    - [cấu trúc thương vụ](term) là gì?
+    - [lợi nhuận/ tổn thất kinh tế](term) là gì?
+    - [tìm hiểu doanh nghiệp - phần 2](term) là gì?
+    - [phương pháp định giá so sánh p/book](term) là gì?
+    - [chào mua công khai](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 4](term) là gì?
+    - [làm quen với báo cáo tài chính - phần 6](term) là gì?
+    - [dự phóng tài chính - phần 2](term) là gì?
+    - [công ty mua lại có mục đích đặc biệt](term) là gì?
+    - [định giá bằng chiết khầu dòng tiền (dcf)](term) là gì?
+    - [rủi ro hệ thống](term) là gì?
+    - [tái cấu trúc](term) là gì?
+    - [thoái vốn](term) là gì?
+    - [phân tích cơ bản](term) là gì?
+    - [thôn tính thù địch](term) là gì?
+    - [mua lại (acquisition)](term) là gì?
+    - [cuộc chiến ủy quyền](term) là gì?
+    - [lạm phát do chi phí đẩy](term) là gì?
+    - [siêu lạm phát](term) là gì?
+    - [chứng khoán của công ty sắp phá sản](term) là gì?
+    - [rủi ro phi hệ thống](term) là gì?
+    - [mô hình định giá tài sản vốn](term) là gì?
+    - [giới thiệu các loại tài sản đầu tư](term) là gì?
+    - [tìm hiểu về cổ tức](term) là gì?
+    - [tiền điện tử là gì?](term) là gì?
+    - [có nên đầu tư vào cổ phiếu ngân hàng?](term) là gì?
+    - [các điểm cần lưu ý về phái sinh](term) là gì?
+    - [giới thiệu về cổ phiếu ngành ngân hàng](term) là gì?
+    - [giới thiệu về cổ phiếu ngành dầu khí](term) là gì?
+    - [xu hướng tăng giá](term) là gì?
+    - [phái sinh là gì và các công cụ phái sinh phổ biến](term) là gì?
+    - [giới thiệu về cổ phiếu ngành năng lượng](term) là gì?
+    - [quỹ phòng hộ](term) là gì?
+    - [đánh giá cổ phiếu bán lẻ](term) là gì?
+    - [giới thiệu cổ phiếu ngành vật liệu cơ bản](term) là gì?
+    - [xu hướng giảm giá](term) là gì?
+    - [chiết khấu](term) là gì?
+    - [tái đầu tư](term) là gì?
+    - [quỹ hưu trí](term) là gì?
+    - [giới thiệu về cổ phiếu ngành bán lẻ](term) là gì?
+    - [những điều cần cân nhắc về cổ phiếu dầu khí](term) là gì?
+    - [giới thiệu về cổ phiếu ngành nông nghiệp](term) là gì?
+    - [phí bảo hiểm](term) là gì?
+    - [lợi nhuận kỳ vọng](term) là gì?
+    - [tỷ suất hoàn vốn nội bộ](term) là gì?
+    - [chứng chỉ quỹ](term) là gì?
+    - [chi phí biến đổi](term) là gì?
+    - [đòn bẩy tài chính](term) là gì?
+    - [bảo hiểm sức khỏe](term) là gì?
+    - [chỉ số nghỉ hưu](term) là gì?
+    - [tài sản thế chấp](term) là gì?
+    - [khoản dự phòng rủi ro](term) là gì?
+    - [năm tài chính](term) là gì?
+    - [đầu tư greenfield](term) là gì?
+    - [tâm lý thị trường](term) là gì?
+    - [dự trữ ngoại hối](term) là gì?
+    - [cung và cầu](term) là gì?
+    - [thị trường vốn](term) là gì?
+    - [thị trường mở](term) là gì?
+    - [bảo hiểm tài sản](term) là gì?
+    - [tài sản bị suy giảm giá trị](term) là gì?
+    - [chiến lược thoái vốn](term) là gì?
+    - [chuỗi cung ứng](term) là gì?
+    - [tài sản cố định hữu hình](term) là gì?
+    - [tài sản cố định vô hình](term) là gì?
+    - [đầu cơ](term) là gì?
+    - [lợi nhuận giữ lại](term) là gì?
+    - [nợ xấu](term) là gì?
+    - [tỷ lệ dự trữ](term) là gì?
+    - [nghiệp vụ thị trường mở](term) là gì?
+    - [chi phí cố định](term) là gì?
+    - [chi phí bán hàng và quản lý doanh nghiệp](term) là gì?
+    - [bảo hiểm nhân thọ](term) là gì?
+    - [khả năng chấp nhận rủi ro](term) là gì?
+    - [lãi suất thả nổi](term) là gì?
+    - [tỷ lệ an toàn vốn](term) là gì?
+    - [khấu hao tài sản hữu hình](term) là gì?
+    - [khấu hao tài sản vô hình](term) là gì?
+    - [đầu tư brownfield](term) là gì?
+    - [đầu tư xanh](term) là gì?
+    - [chính sách abenomics](term) là gì?
+    - [lợi tức bất thường](term) là gì?
+    - [bảng sao kê tài khoản](term) là gì?
+    - [lợi thế tuyệt đối](term) là gì?
+    - [lợi nhuận tuyệt đối](term) là gì?
+    - [hệ số hấp thụ](term) là gì?
+    - [số dư tài khoản](term) là gì?
+    - [số tài khoản](term) là gì?
+    - [các phân loại cổ phiếu khác](term) là gì?
+    - [cách chọn mua cổ phiếu](term) là gì?
+    - [khấu hao nhanh](term) là gì?
+    - [cổ phiếu là gì?](term) là gì?
+    - [đánh thuế theo khả năng nộp thuế](term) là gì?
+    - [điều khoản tăng tốc](term) là gì?
+    - [chấp nhận rủi ro](term) là gì?
+    - [trợ cấp tử vong do tai nạn](term) là gì?
+    - [loại trái phiếu theo tổ chức phát hành](term) là gì?
+    - [xác định mức độ chấp nhận rủi ro](term) là gì?
+    - [phân bổ tài sản](term) là gì?
+    - [trái phiếu là gì?](term) là gì?
+    - [xếp hạng tín nhiệm trái phiếu](term) là gì?
+    - [cần chuẩn bị gì trước khi đầu tư](term) là gì?
+    - [các khái niệm đặc thù của trái phiếu](term) là gì?
+    - [bắt đầu giải ngân](term) là gì?
+    - [cân bằng danh mục đầu tư](term) là gì?
+    - [chứng chỉ quỹ](term) là gì?
+    - [bất động sản là gì?](term) là gì?
+    - [vì sao bạn nên đầu tư vào bất động sản?](term) là gì?
+    - [tiền gửi và chứng chỉ tiền gửi](term) là gì?
+    - [cách đầu tư vào bất động sản](term) là gì?
+    - [giới thiệu phân tích kỹ thuật cơ bản](term) là gì?
+    - [đánh giá lại kế hoạch hưu trí](term) là gì?
+    - [kế toán](term) là gì?
+    - [chu kỳ kế toán](term) là gì?
+    - [kế hoạch hưu trí](term) là gì?
+    - [lựa chọn chứng chỉ tiền gửi phù hợp](term) là gì?
+    - [trách nhiệm giải trình](term) là gì?
+    - [kế toán viên](term) là gì?
+    - [phương trình kế toán](term) là gì?
+    - [xây dựng danh mục đầu tư hưu trí](term) là gì?
+    - [phương pháp kế toán](term) là gì?
+    - [các sản phẩm hưu trí](term) là gì?
+    - [các bước lập kế hoạch hưu trí](term) là gì?
+    - [có nên đổi sang một cd có lãi suất cao hơn?](term) là gì?
+    - [các khía cạnh khác của hưu trí](term) là gì?
+    - [phí chênh lệch mua lại](term) là gì?
+    - [chênh lệch từ tính toán dựa trên mô hình thống kê](term) là gì?
+    - [vốn góp bổ sung](term) là gì?
+    - [lãi tính gộp](term) là gì?
+    - [giá đóng cửa điều chỉnh](term) là gì?
+    - [ebitda điều chỉnh](term) là gì?
+    - [chi phí quản lý](term) là gì?
+    - [trái phiếu được chính phủ bảo lãnh](term) là gì?
+    - [chi phí đại diện](term) là gì?
+    - [lý thuyết vấn đề đại diện](term) là gì?
+    - [chính sách kế toán](term) là gì?
+    - [lợi nhuận kế toán](term) là gì?
+    - [tỷ lệ thanh toán nhanh](term) là gì?
+    - [chi phí tiếp quản](term) là gì?
+    - [nhà đầu tư chủ động](term) là gì?
+    - [định phí bảo hiểm](term) là gì?
+    - [tín dụng thuế trẻ em bổ sung](term) là gì?
+    - [thế chấp có lãi suất điều chỉnh](term) là gì?
+    - [thanh toán tạm ứng](term) là gì?
+    - [lựa chọn đối nghịch](term) là gì?
+    - [liên kết](term) là gì?
+    - [tiếp thị liên kết](term) là gì?
+    - [giao dịch chứng khoán ngoài giờ](term) là gì?
+    - [kế toán dồn tích](term) là gì?
+    - [chi phí dồn tích](term) là gì?
+    - [lãi dồn tích](term) là gì?
+    - [doanh thu dồn tích](term) là gì?
+    - [khấu hao lũy kế](term) là gì?
+    - [tỷ suất lợi nhuận thực tế sau thuế](term) là gì?
+    - [người đại diện](term) là gì?
+    - [tổng cầu](term) là gì?
+    - [nguyên tắc kế toán](term) là gì?
+    - [các khoản dồn tích](term) là gì?
+    - [quản lý chủ động](term) là gì?
+    - [thu nhập gộp hiệu chỉnh](term) là gì?
+    - [ngân sách quảng cáo](term) là gì?
+    - [công ty liên kết](term) là gì?
+    - [tổng cung](term) là gì?
+    - [giao dịch thuật toán](term) là gì?
+    - [thuế tối thiểu thay thế](term) là gì?
+    - [hệ số alpha](term) là gì?
+    - [chiến lược đầu tư năng động](term) là gì?
+    - [hiệu quả phân bổ](term) là gì?
+    - [phân phối chứng khoán](term) là gì?
+    - [dự phòng nợ phải thu khó đòi](term) là gì?
+    - [tờ khai thuế sửa đổi](term) là gì?
+    - [hợp đồng quyền chọn kiểu mỹ](term) là gì?
+    - [đại hội thường niên](term) là gì?
+    - [phân tích phương sai](term) là gì?
+    - [tỷ suất thu nhập năm](term) là gì?
+    - [báo cáo thường niên](term) là gì?
+    - [phần bù trái phiếu trả dần](term) là gì?
+    - [vốn vay trả dần](term) là gì?
+    - [hiệu ứng mỏ neo](term) là gì?
+    - [lãi suất tương đương](term) là gì?
+    - [sàn giao dịch chứng khoán mỹ](term) là gì?
+    - [thời biểu chi trả dần](term) là gì?
+    - [nhà đầu tư chứng khoán chuyên nghiệp](term) là gì?
+    - [lợi nhuận hàng năm](term) là gì?
+    - [annualize](term) là gì?
+    - [niên kim chi trả đầu kỳ](term) là gì?
+    - [luật chống độc quyền](term) là gì?
+    - [dòng niên kim](term) là gì?
+    - [overwriting](term) là gì?
+    - [tỷ lệ thu nhập của chủ sở hữu](term) là gì?
+    - [sự tăng giá](term) là gì?
+    - [biên an toàn](term) là gì?
+    - [cuộc khủng hoảng tài chính châu á](term) là gì?
+    - [thanh toán t+1.5](term) là gì?
+    - [giá tham chiếu, giá đóng cửa, giá mở cửa](term) là gì?
+    - [dư mua, dư bán](term) là gì?
+    - [trí tuệ nhân tạo](term) là gì?
+    - [ngân hàng phát triển châu á](term) là gì?
+    - [giá trần, giá sàn](term) là gì?
+    - [lệnh giới hạn (lệnh lo)](term) là gì?
+    - [lệnh đóng cửa (lệnh atc)](term) là gì?
+    - [thu nhập hàng năm](term) là gì?
+    - [luật chống rửa tiền](term) là gì?
+    - [doanh thu hàng năm](term) là gì?
+    - [phương pháp tính thuế thu nhập cả năm](term) là gì?
+    - [tỷ suất lợi nhuận kế toán](term) là gì?
+    - [bảng niên kim](term) là gì?
+    - [điều khoản chống pha loãng](term) là gì?
+    - [kinh tế học ứng dụng](term) là gì?
+    - [thẩm định](term) là gì?
+    - [chi phí kiểm soát chất lượng](term) là gì?
+    - [lý thuyết định giá kinh doanh chênh lệch](term) là gì?
+    - [trung bình cộng](term) là gì?
+    - [sở giao dịch chứng khoán](term) là gì?
+    - [lệnh thị trường (lệnh mp)](term) là gì?
+    - [lệnh mở cửa (lệnh ato)](term) là gì?
+    - [trọng tài](term) là gì?
+    - [điều lệ công ty](term) là gì?
+    - [vn-30](term) là gì?
+    - [biên độ giá](term) là gì?
+    - [thời gian giao dịch](term) là gì?
+    - [thời gian khớp lệnh trên hsx](term) là gì?
+    - [tỷ suất sinh lời kỳ vọng](term) là gì?
+    - [quỹ tương hỗ](term) là gì?
+    - [khớp lệnh](term) là gì?
+    - [ứng trước tiền bán](term) là gì?
+    - [giá vốn hàng bán](term) là gì?
+    - [lợi nhuận biên hoạt đông kinh doanh (ebit margin)](term) là gì?
+    - [lợi nhuận ròng](term) là gì?
+    - [tỷ lệ khả năng thanh toán nợ bằng tài sản](term) là gì?
+    - [giá chào bán](term) là gì?
+    - [tài sản](term) là gì?
+    - [thị trường đấu giá](term) là gì?
+    - [kiểm toán](term) là gì?
+    - [ủy ban kiểm toán](term) là gì?
+    - [kiểm toán viên](term) là gì?
+    - [ý kiến kiểm toán](term) là gì?
+    - [nghĩa vụ đối với tài sản cố định hết tuổi thọ](term) là gì?
+    - [chứng khoán đảm bảo bằng tài sản](term) là gì?
+    - [rủi ro kiểm toán](term) là gì?
+    - [công ty quản lý tài sản](term) là gì?
+    - [quản lý tài sản nợ](term) là gì?
+    - [thương phiếu bảo đảm bằng tài sản](term) là gì?
+    - [cấp vốn dựa trên tài sản](term) là gì?
+    - [tỷ lệ vòng quay tài sản](term) là gì?
+    - [định giá tài sản](term) là gì?
+    - [phương pháp định giá ev/ebitda](term) là gì?
+    - [phương pháp định giá so sánh p/sales](term) là gì?
+    - [phân bổ danh mục 60/40 có còn phù hợp?](term) là gì?
+    - [đo lường mức độ đa dạng hóa của danh mục](term) là gì?
+    - [danh mục đầu tư nên dành ra bao nhiêu tiền mặt?](term) là gì?
+    - [cổ phiếu được phép phát hành](term) là gì?
+    - [thanh toán hóa đơn tự động](term) là gì?
+    - [báo cáo của kiểm toán viên](term) là gì?
+    - [cho vay đóng phí tự động](term) là gì?
+    - [ủy ban quản lý tài sản](term) là gì?
+    - [dịch vụ đảm bảo](term) là gì?
+    - [chứng khoán có sẵn để bán](term) là gì?
+    - [lợi nhuận trung bình hàng năm](term) là gì?
+    - [phương pháp tính giá dựa trên chi phí bình quân](term) là gì?
+    - [phương pháp định giá dựa trên tài sản](term) là gì?
+    - [chính sách tài khóa tự ổn định](term) là gì?
+    - [số dư khả dụng](term) là gì?
+    - [phương pháp dư nợ bình quân hàng ngày](term) là gì?
+    - [cho vay dựa trên tài sản](term) là gì?
+    - [số ngày tồn kho bình quân](term) là gì?
+    - [thông tin bất cân xứng](term) là gì?
+    - [mệnh giá](term) là gì?
+    - [tốc độ tăng trưởng trung bình hàng năm](term) là gì?
+    - [kỳ thu tiền bình quân](term) là gì?
+    - [giá phòng trung bình hàng ngày](term) là gì?
+    - [số dư bình quân chưa thanh toán](term) là gì?
+    - [lợi nhuận trung bình](term) là gì?
+    - [ngân sách cân bằng](term) là gì?
+    - [khoản trả nợ tăng vọt](term) là gì?
+    - [vốn ngân hàng](term) là gì?
+    - [tín dụng ngân hàng](term) là gì?
+    - [khối lượng giao dịch trung bình hàng ngày](term) là gì?
+    - [thư xác nhận ngân hàng](term) là gì?
+    - [hàng tồn kho bình quân](term) là gì?
+    - [chiến lược đầu tư cân bằng](term) là gì?
+    - [bảo lãnh ngân hàng](term) là gì?
+    - [tiền gửi ngân hàng](term) là gì?
+    - [mã tổ chức phát hành thẻ](term) là gì?
+    - [hối phiếu ngân hàng](term) là gì?
+    - [một số cổ phiếu nông nghiệp nổi bật](term) là gì?
+    - [khoản hoàn thuế](term) là gì?
+    - [hợp đồng tương lai](term) là gì?
+    - [quyền chọn mua](term) là gì?
+    - [chống pha loãng](term) là gì?
+    - [eps pha loãng](term) là gì?
+    - [thị trường thứ cấp](term) là gì?
+    - [hợp đồng kỳ hạn](term) là gì?
+    - [hnx-30](term) là gì?
+    - [lỗ đầu tư vốn](term) là gì?
+    - [thị trường sơ cấp](term) là gì?
+    - [sở giao dịch chứng khoán tp.hcm (hsx)](term) là gì?
+    - [sở giao dịch chứng khoán hà nội (hnx)](term) là gì?
+    - [quyền chọn bán](term) là gì?
+    - [lãi đầu tư vốn](term) là gì?
+    - [thị trường giao dịch otc](term) là gì?
+    - [cổ phiếu đang lưu hành](term) là gì?
+    - [cổ phần phổ thông](term) là gì?
+    - [định giá theo p/sales hoặc ev/sales](term) là gì?
+    - [biểu đồ nến](term) là gì?
+    - [sức khỏe tài chính](term) là gì?
+    - [tiết kiệm](term) là gì?
+    - [thặng dư ngân sách](term) là gì?
+    - [thâm hụt ngân sách](term) là gì?
+    - [lãi suất liên ngân hàng luân đôn](term) là gì?
+    - [thế chấp](term) là gì?
+    - [định giá theo p/book](term) là gì?
+    - [cổ phiếu niêm yết](term) là gì?
+    - [lãi suất cơ bản](term) là gì?
+    - [đại suy thoái](term) là gì?
+    - [hiểu biết tài chính](term) là gì?
+    - [p/e trailing](term) là gì?
+    - [định giá theo ev/ebitda](term) là gì?
+    - [tăng trưởng gdp](term) là gì?
+    - [điểm cơ bản](term) là gì?
+    - [giai đoạn đỉnh](term) là gì?
+    - [suy thoái](term) là gì?
+    - [ngân hàng trung ương](term) là gì?
+    - [ngân hàng thương mại](term) là gì?
+    - [ngân hàng kỹ thuật số](term) là gì?
+    - [cú sốc cung](term) là gì?
+    - [chứng chỉ tiền gửi](term) là gì?
+    - [tín phiếu kho bạc](term) là gì?
+    - [lãi suất đáo hạn](term) là gì?
+    - [ngân hàng đầu tư](term) là gì?
+    - [lợi nhuận tương đối](term) là gì?
+    - [lãi suất coupon](term) là gì?
+    - [giấy tờ có giá](term) là gì?
+    - [thỏa thuận mua lại](term) là gì?
+    - [giới thiệu về cổ phiếu ngành bảo hiểm](term) là gì?
+    - [một số cổ phiếu ngân hàng nổi bật](term) là gì?
+    - [sửa và hủy lệnh](term) là gì?
+    - [cổ đông chi phối](term) là gì?
+    - [thuế cổ tức nhà đầu tư cá nhân](term) là gì?
+    - [thuế bán chứng khoán nhà đầu tư cá nhân](term) là gì?
+    - [tăng trưởng tín dụng](term) là gì?
+    - [room tăng trưởng tín dụng](term) là gì?
+    - [khớp lệnh liên tục](term) là gì?
+    - [lệnh chờ khớp](term) là gì?
+    - [thùng dầu quy đổi](term) là gì?
+    - [rào cản gia nhập](term) là gì?
+    - [giỏ hàng hóa](term) là gì?
+    - [tài chính hành vi](term) là gì?
+    - [đường cong hình chuông](term) là gì?
+    - [người thụ hưởng](term) là gì?
+    - [benjamin graham](term) là gì?
+    - [hiệu ứng cơ sở](term) là gì?
+    - [điểm tham chiếu](term) là gì?
+    - [bear call spread](term) là gì?
+    - [quyền chọn bermuda](term) là gì?
+    - [beta](term) là gì?
+    - [khớp lệnh định kỳ](term) là gì?
+    - [giao dịch thỏa thuận](term) là gì?
+    - [xếp hạng ngân hàng](term) là gì?
+    - [rủi ro cơ sở](term) là gì?
+    - [bear put spread](term) là gì?
+    - [báo cáo đối chiếu ngân hàng](term) là gì?
+    - [bài kiểm tra sức chịu đựng của ngân hàng](term) là gì?
+    - [chấp phiếu ngân hàng](term) là gì?
+    - [phương thức hàng đổi hàng](term) là gì?
+    - [lương cơ bản](term) là gì?
+    - [nguyên liệu cơ bản](term) là gì?
+    - [kinh tế học hành vi](term) là gì?
+    - [benchmark](term) là gì?
+    - [tỷ lệ lợi ích – chi phí](term) là gì?
+    - [khối lượng chào mua](term) là gì?
+    - [big data](term) là gì?
+    - [hợp đồng song phương](term) là gì?
+    - [vận đơn đường biển](term) là gì?
+    - [lợi suất trái phiếu tương đương](term) là gì?
+    - [phương pháp đầu tư từ dưới lên](term) là gì?
+    - [tài trợ bắc cầu](term) là gì?
+    - [giá dự thầu](term) là gì?
+    - [chu kỳ thanh toán](term) là gì?
+    - [binance coin](term) là gì?
+    - [bloomberg terminal](term) là gì?
+    - [ban giám đốc](term) là gì?
+    - [hội đồng uỷ thác](term) là gì?
+    - [quỹ trái phiếu](term) là gì?
+    - [hợp đồng trái phiếu tương lai](term) là gì?
+    - [chiến lược thang trái phiếu](term) là gì?
+    - [yết giá trái phiếu](term) là gì?
+    - [xếp hạng trái phiếu](term) là gì?
+    - [thương mại song phương](term) là gì?
+    - [hối phiếu](term) là gì?
+    - [quyền chọn nhị phân](term) là gì?
+    - [chiết khấu trái phiếu](term) là gì?
+    - [quỹ hoán đổi danh mục trái phiếu](term) là gì?
+    - [định giá trái phiếu](term) là gì?
+    - [trái chủ](term) là gì?
+    - [phương pháp dựng sổ](term) là gì?
+    - [kết quả kinh doanh sau thuế](term) là gì?
+    - [brics](term) là gì?
+    - [khoản vay bắc cầu](term) là gì?
+    - [chênh lệch ngân sách](term) là gì?
+    - [trái phiếu bảo lãnh dự thầu](term) là gì?
+    - [đấu giá tín phiếu](term) là gì?
+    - [giao ước trái phiếu](term) là gì?
+    - [thị trường trái phiếu](term) là gì?
+    - [cơ quan xếp hạng tín dụng](term) là gì?
+    - [lợi suất trái phiếu](term) là gì?
+    - [số tiền vay cơ sở](term) là gì?
+    - [điểm hòa vốn](term) là gì?
+    - [giá hòa vốn](term) là gì?
+    - [brexit](term) là gì?
+    - [chuyên viên môi giới](term) là gì?
+    - [tài khoản chứng khoán](term) là gì?
+    - [lệnh bán chốt lời](term) là gì?
+    - [lệnh bán cắt lỗ](term) là gì?
+    - [lệnh định kỳ](term) là gì?
+    - [các loại lệnh trên hsx](term) là gì?
+    - [danh mục đầu tư là gì](term) là gì?
+    - [thời gian khớp lệnh trên hnx](term) là gì?
+    - [trái phiếu trả một lần](term) là gì?
+    - [thanh toán một lần](term) là gì?
+    - [tỷ lệ đốt tiền](term) là gì?
+    - [tài sản kinh doanh](term) là gì?
+    - [kế hoạch kinh doanh liên tục](term) là gì?
+    - [thị phần](term) là gì?
+    - [chi phí cơ hội](term) là gì?
+    - [tài sản rủi ro](term) là gì?
+    - [tài sản phi rủi ro](term) là gì?
+    - [đầu tư trực tiếp nước ngoài](term) là gì?
+    - [doanh nghiệp fdi](term) là gì?
+    - [tài sản vốn](term) là gì?
+    - [hoạch định ngân sách vốn](term) là gì?
+    - [hoàn tiền](term) là gì?
+    - [chu kì chuyển đổi tiền mặt](term) là gì?
+    - [chi phí vốn](term) là gì?
+    - [tiền và tương đương tiền](term) là gì?
+    - [thuê tài sản vốn](term) là gì?
+    - [đường thị trường vốn](term) là gì?
+    - [cấu trúc vốn](term) là gì?
+    - [vốn hóa](term) là gì?
+    - [thuế chuyển nhượng vốn](term) là gì?
+    - [quản trị doanh nghiệp](term) là gì?
+    - [chủ nghĩa tư bản](term) là gì?
+    - [dòng tiền](term) là gì?
+    - [dòng tiền từ hoạt động tài trợ](term) là gì?
+    - [phương pháp kế toán tiền mặt](term) là gì?
+    - [ngân sách tiền mặt](term) là gì?
+    - [dòng tiền từ hoạt động đầu tư](term) là gì?
+    - [dòng tiền từ hoạt động kinh doanh](term) là gì?
+    - [quản trị tiền mặt](term) là gì?
+    - [dịch vụ phát hàng thu tiền hộ](term) là gì?
+    - [tỷ số thanh khoản nhanh](term) là gì?
+    - [giấy chứng nhận bảo hiểm](term) là gì?
+    - [tỷ lệ vốn hóa](term) là gì?
+    - [chứng chỉ hoạch định tài chính cá nhân](term) là gì?
+    - [chứng chỉ chuyên gia kiểm định hệ thống thông tin](term) là gì?
+    - [chứng chỉ kế toán quản trị và quản trị tài chính](term) là gì?
+    - [chứng chỉ kế toán viên công chứng](term) là gì?
+    - [bảng vốn hóa](term) là gì?
+    - [chi phí vốn hóa](term) là gì?
+    - [bộ máy quan liêu](term) là gì?
+    - [bảo hiểm nhân thọ giá trị tiền mặt](term) là gì?
+    - [khoản vay thương mại](term) là gì?
+    - [tỷ lệ dòng tiền trên vốn đầu tư](term) là gì?
+    - [tái cấp vốn bằng tiền mặt](term) là gì?
+    - [nền kinh tế kế hoạch hóa tập trung](term) là gì?
+    - [tiền hoa hồng](term) là gì?
+    - [hàng hóa](term) là gì?
+    - [hợp đồng tương lai hàng hóa](term) là gì?
+    - [trái phiếu chuyển đổi](term) là gì?
+    - [bất động sản thương mại](term) là gì?
+    - [thương mại hóa](term) là gì?
+    - [quỹ hỗn hợp](term) là gì?
+    - [tỷ lệ churn](term) là gì?
+    - [vốn cổ phần](term) là gì?
+    - [cổ phiếu phổ thông](term) là gì?
+    - [giá bán trung bình](term) là gì?
+    - [trái phiếu mệnh giá nhỏ](term) là gì?
+    - [đơn hàng tồn đọng](term) là gì?
+    - [kiểm thử dữ liệu quá khứ](term) là gì?
+    - [quỹ cân bằng](term) là gì?
+    - [phân phối bảo hiểm qua ngân hàng](term) là gì?
+    - [rút tiền hàng loạt](term) là gì?
+    - [chiến lược đại dương xanh](term) là gì?
+    - [chu kỳ kinh doanh](term) là gì?
+    - [kinh tế học kinh doanh](term) là gì?
+    - [mô hình kinh doanh](term) là gì?
+    - [kế hoạch kinh doanh](term) là gì?
+    - [mua để trả](term) là gì?
+    - [mua lại cổ phiếu](term) là gì?
+    - [hợp đồng hoán đổi tài sản](term) là gì?
+    - [ngân hàng](term) là gì?
+    - [sự thu hồi](term) là gì?
+    - [đóng vị thế](term) là gì?
+    - [lý thuyết xung đột](term) là gì?
+    - [trái phiếu doanh nghiệp](term) là gì?
+    - [thuế thu nhập doanh nghiệp](term) là gì?
+    - [hệ số tương quan](term) là gì?
+    - [chi phí sử dụng vốn](term) là gì?
+    - [chi phí sử dụng vốn vay](term) là gì?
+    - [chi phí vốn chủ sở hữu](term) là gì?
+    - [chí phí doanh thu](term) là gì?
+    - [văn hóa doanh nghiệp](term) là gì?
+    - [lãi suất kép liên tục](term) là gì?
+    - [con bò tiền mặt](term) là gì?
+    - [các khoản tương đương tiền](term) là gì?
+    - [giả định các yếu tố khác không đổi](term) là gì?
+    - [phá sản theo chương 11](term) là gì?
+    - [kế toán viên công chứng (ca)](term) là gì?
+    - [chứng chỉ phân tích tài chính (cfa)](term) là gì?
+    - [tài khoản vãng lai](term) là gì?
+    - [giám đốc điều hành (ceo)](term) là gì?
+    - [giám đốc tài chính](term) là gì?
+    - [giám đốc vận hành (coo)](term) là gì?
+    - [giám đốc công nghệ (cto)](term) là gì?
+    - [miễn thuế trẻ em](term) là gì?
+    - [bức tường trung quốc](term) là gì?
+    - [hạn mức tín dụng](term) là gì?
+    - [rủi ro tính dụng](term) là gì?
+    - [điểm tín dụng](term) là gì?
+    - [giao dịch chênh lệch lãi suất tiền tệ](term) là gì?
+    - [chốt tiền tệ](term) là gì?
+    - [hợp đồng trao đổi ngoại tệ](term) là gì?
+    - [tài khoản vãng lai](term) là gì?
+    - [thâm hụt tài khoản vãng lai](term) là gì?
+    - [tài sản ngắn hạn](term) là gì?
+    - [nợ ngắn hạn](term) là gì?
+    - [tỷ lệ thanh toán ngắn hạn](term) là gì?
+    - [trái phiếu có thể thu hồi](term) là gì?
+    - [séc bị huỷ](term) là gì?
+    - [tư liệu sản xuất](term) là gì?
+    - [vốn đầu tư](term) là gì?
+    - [thặng dư tiêu dùng](term) là gì?
+    - [đồng bảo hiểm](term) là gì?
+    - [công ty môi giới](term) là gì?
+    - [báo cáo tín dụng](term) là gì?
+    - [số dư thẻ tín dụng](term) là gì?
+    - [dòng thu nhập tuần hoàn](term) là gì?
+    - [trung tâm thanh toán bù trừ](term) là gì?
+    - [tài sản tiềm tàng](term) là gì?
+    - [nợ tiềm tàng](term) là gì?
+    - [đầu tư trái ngược](term) là gì?
+    - [thông đồng](term) là gì?
+    - [hàng tiêu dùng](term) là gì?
+    - [khoản vay xây dựng](term) là gì?
+    - [ký gửi](term) là gì?
+    - [tín dụng tiêu dùng](term) là gì?
