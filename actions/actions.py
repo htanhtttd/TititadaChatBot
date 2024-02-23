@@ -37,8 +37,15 @@ class ActionAskTerminology(Action):
         entities = tracker.latest_message['entities'][0]
         definition = entities['value']      
         print(definition)
-        df = pandas.read_csv('C:\\Users\\Administrator\\Desktop\\Rasa\\Definitioin.csv')
-        description = df[df["Definition"].str.contains(definition)]['Description'].values[0]
-        dispatcher.utter_message(text=str(description))
+        df = pandas.read_csv('C:\\Users\\htanh\\Desktop\\Tititada\\TititadaChatBot\\Definitioin.csv')
+        df['length_definition'] = df['Definition'].apply(len)
+        result = df[(df["Definition"].str.contains(definition)) & (df['length_definition'] <= len(definition)+2) & (df['length_definition'] >= len(definition)-2)]['Description'].values
+
+        if result is None:
+            message = 'Not have data'
+        else:
+            message = result[0]
+        
+        dispatcher.utter_message(text=str(message))
         
         return []  
